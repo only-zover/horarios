@@ -1,9 +1,17 @@
 <script>
     import '@picocss/pico/css/pico.min.css'
 </script>
-
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-<div class="container">
-    <h1>Teste</h1>
-</div>
+<main>
+    <nav>
+        <ul>
+            <li>
+                <strong>Horário</strong>
+            </li>
+        </ul>
+        <ul>
+            <li><a href="/" data-tooltip="teste">Mais</a></li>
+            <li><a href="/">Sobre</a></li>
+            <li><a href="/">Ajuda</a></li>
+        </ul>
+    </nav>
+</main>
