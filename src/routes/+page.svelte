@@ -1,6 +1,12 @@
-<script>
+<script lang="ts">
     import '@picocss/pico/css/pico.min.css'
+    import type { PageData } from './$types'
+    
+    export let data: PageData
 </script>
+
+{data.nome}
+{data.parametros}
 <header class="container">
     <h1>Horários</h1>
 </header>
@@ -12,10 +18,10 @@
                 <input type="text" placeholder="Matéria">
             </label>
             <div class="buttons">
-                <a href="http://" role="button">Pesquisar</a>
+                <a href="/#" role="button">Pesquisar</a>
                 <div class="right-side-btn">
-                    <a href="http://" role="button">Adicionar +</a>
-                    <a class="outline secondary" href="http://" role="button">Deletar</a>
+                    <a href="/#" role="button">Adicionar +</a>
+                    <a class="outline secondary" href="/#" role="button">Deletar</a>
                 </div>
             </div>
         </div>
