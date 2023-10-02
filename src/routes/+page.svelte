@@ -1,12 +1,16 @@
 <script lang="ts">
     import '@picocss/pico/css/pico.min.css'
-    import type { PageData } from './$types'
+    import type { MouseEventHandler } from 'svelte/elements';
     
-    export let data: PageData
+    let inputValue: string = ''
+
+    function addSubject(subject: string): MouseEventHandler<HTMLElement> {
+        
+        return () => console.log(inputValue)
+    }
+
 </script>
 
-{data.nome}
-{data.parametros}
 <header class="container">
     <h1>Horários</h1>
 </header>
@@ -15,12 +19,12 @@
         <div>
             <label for="">
                 Buscar
-                <input type="text" placeholder="Matéria">
+                <input type="text" placeholder="Matéria" bind:value={inputValue} />
             </label>
             <div class="buttons">
                 <a href="/#" role="button">Pesquisar</a>
                 <div class="right-side-btn">
-                    <a href="/#" role="button">Adicionar +</a>
+                    <a href="/#" role="button" on:click={addSubject(inputValue)}>Adicionar +</a>
                     <a class="outline secondary" href="/#" role="button">Deletar</a>
                 </div>
             </div>
